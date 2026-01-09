@@ -1,0 +1,180 @@
+@import url("./theme.css");
+
+/* =========================================
+   SPLIT HERO — SHADES OF TEXAS
+   ========================================= */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-split {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* ensures it’s at least the viewport height */
+    overflow: hidden;
+    background-color: var(--tx-black);
+}
+
+
+/* =========================================
+   HERO LANES
+   ========================================= */
+
+.hero-lane {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px;
+    transition: flex 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--tx-white);
+    cursor: pointer;
+}
+
+/* IMAGERY */
+.residential {
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200') center / cover no-repeat;
+}
+
+.commercial {
+    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200') center / cover no-repeat;
+}
+
+/* =========================================
+   READABILITY OVERLAY
+   ========================================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0.75)
+    );
+    z-index: 1;
+    transition: background 0.5s ease;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 520px;
+    margin: auto; /* centers content vertically in lane */
+}
+
+/* =========================================
+   BADGE
+   ========================================= */
+
+.badge {
+    display: inline-block;
+    background: var(--tx-red);
+    color: var(--tx-white);
+    padding: 6px 18px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    margin-bottom: 22px;
+}
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+
+.hero-content h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: var(--text-secondary);
+}
+
+/* =========================================
+   INTERACTION (DESKTOP)
+   ========================================= */
+
+@media (min-width: 769px) {
+    .hero-lane:hover {
+        flex: 1.6;
+    }
+
+    .hero-lane:hover .hero-overlay {
+        background: rgba(0,0,0,0.35);
+    }
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.hero-btn {
+    display: inline-block;
+    padding: 16px 34px;
+    border-radius: 6px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+/* Primary */
+.hero-btn.primary {
+    background-color: var(--tx-white);
+    color: var(--tx-black);
+}
+
+.hero-btn.primary:hover {
+    background-color: var(--tx-red);
+    color: var(--tx-white);
+}
+
+/* Outline */
+.hero-btn.outline {
+    background-color: transparent;
+    border: 2px solid var(--tx-white);
+    color: var(--tx-white);
+}
+
+.hero-btn.outline:hover {
+    background-color: var(--tx-red);
+    border-color: var(--tx-red);
+    color: var(--tx-white);
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   MOBILE & Z-FOLD
+   ========================================= */
+
+@media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-lane {
+        height: 60vh; /* good for mobile view */
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+}

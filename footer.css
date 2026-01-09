@@ -1,0 +1,160 @@
+@import url("./theme.css");
+
+/* =========================================
+   ARCHITECTURAL FOOTER — SHADES OF TEXAS
+   ========================================= */
+
+.main-footer {
+    background: var(--tx-black);
+    color: var(--tx-white);
+    padding: 100px 0 60px;
+    border-top: 1px solid var(--tx-gray);
+    width: 100%;
+}
+
+/* =========================================
+   FOOTER GRID
+   ========================================= */
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 0 40px;
+    gap: 60px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-brand {
+    flex: 2;
+}
+
+/* =========================================
+   BRAND BLOCK
+   ========================================= */
+
+.footer-brand .logo {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--tx-white);
+    text-decoration: none;
+    letter-spacing: -1.5px;
+    display: block;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.footer-brand .logo span {
+    color: var(--tx-red);
+}
+
+.footer-brand p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 340px;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   COLUMN HEADERS
+   ========================================= */
+
+.footer-col h4 {
+    color: var(--tx-white);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.footer-col h4::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: var(--tx-red);
+}
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+.footer-col a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: var(--tx-red);
+    transform: translateX(8px);
+}
+
+/* =========================================
+   FOOTER BOTTOM BAR
+   ========================================= */
+
+.footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footer-bottom p {
+    color: #555;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        flex: 100%;
+    }
+
+    .footer-col {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        padding: 0 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

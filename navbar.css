@@ -1,0 +1,243 @@
+@import url("./theme.css");
+
+/* =========================================
+   GLOBAL RESET (NAV SAFE)
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Container utility */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   TOP ANNOUNCEMENT BAR
+   ========================================= */
+
+.top-announcement-bar {
+    background-color: var(--tx-black);
+    color: var(--tx-white);
+    font-size: 0.85rem;
+    padding: 8px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--tx-gray);
+}
+
+.top-announcement-bar a {
+    color: var(--tx-red);
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+/* =========================================
+   MAIN NAVIGATION (STICKY)
+   ========================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--tx-black);
+    border-bottom: 1px solid var(--tx-gray);
+}
+
+.main-nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.brand-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--tx-red-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.brand-logo .light-text {
+    font-weight: 300;
+    color: var(--tx-blue)
+}
+
+.location-badge {
+    font-size: 0.6rem;
+    background: var(--tx-dark);
+    padding: 3px 7px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    margin-left: 6px;
+    color: var(--text-secondary);
+}
+
+/* =========================================
+   DESKTOP NAV LINKS
+   ========================================= */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--tx-black);
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+/* Subtle underline hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--tx-red);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   CTA BUTTON
+   ========================================= */
+
+.btn-primary {
+    background-color: var(--tx-red);
+    color: var(--tx-white) !important;
+    padding: 10px 26px;
+    border-radius: 6px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background-color: var(--tx-red-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(200,16,46,0.35);
+}
+
+/* =========================================
+   MOBILE MENU TOGGLE
+   ========================================= */
+
+.nav-toggle-input {
+    display: none;
+}
+
+.nav-hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--tx-black);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--tx-black);
+        color: var(--tx-red);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        border-top: 1px solid var(--tx-gray);
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid var(--tx-dark);
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 16px 20px;
+        width: 100%;
+        color: var(--tx-red);
+    }
+
+    .cta-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .btn-primary {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Open menu */
+    .nav-toggle-input:checked ~ .nav-links {
+        max-height: 400px;
+    }
+
+    /* Hamburger → X */
+    .nav-toggle-input:checked ~ .nav-hamburger .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .nav-toggle-input:checked ~ .nav-hamburger .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle-input:checked ~ .nav-hamburger .line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+}

@@ -1,0 +1,216 @@
+@import url("./theme.css");
+
+/* =========================================
+   HIGH-END TEXAS CONTACT SECTION
+   ========================================= */
+
+.contact-section {
+    padding: 160px 0 100px;
+    background-color: var(--tx-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle vertical grid accent */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 1px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+   LEFT: VISUAL / DIRECT CONTACT
+   ========================================= */
+
+.contact-visual {
+    background: var(--tx-black);
+    padding: 70px;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-40px);
+    box-shadow: 20px 20px 0px var(--tx-red);
+}
+
+.contact-visual h2 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 0.85;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--tx-white);
+}
+
+.contact-visual h2 span {
+    display: block;
+    font-size: 2.5rem;
+    margin-top: 12px;
+    color: var(--tx-red);
+}
+
+/* Direct Contact Info */
+.direct-contact {
+    margin-top: 60px;
+}
+
+.direct-contact .item {
+    margin-bottom: 30px;
+}
+
+.direct-contact label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #777;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.direct-contact p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--tx-white);
+}
+
+/* =========================================
+   RIGHT: FORM PANEL
+   ========================================= */
+
+.contact-form-panel {
+    background: var(--tx-dark);
+    padding: 80px;
+    border: 1px solid var(--tx-gray);
+}
+
+/* Header */
+.form-header {
+    margin-bottom: 50px;
+}
+
+.form-header h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--tx-red);
+    margin-bottom: 12px;
+    font-weight: 900;
+}
+
+.form-header p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* =========================================
+   FLOATING LABEL INPUTS
+   ========================================= */
+
+.input-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-bottom: 1px solid var(--tx-gray);
+    font-size: 1.1rem;
+    background: transparent;
+    color: var(--text-primary);
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.input-group label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+/* Floating animation */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -15px;
+    font-size: 0.6rem;
+    color: var(--tx-red);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-bottom: 1px solid var(--tx-red);
+}
+
+/* =========================================
+   CTA BUTTON
+   ========================================= */
+
+.cta-button {
+    background: none;
+    border: 2px solid var(--tx-red);
+    color: var(--tx-white);
+    padding: 20px 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--tx-red);
+    color: var(--tx-white);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1100px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-visual {
+        transform: none;
+        box-shadow: 15px 15px 0px var(--tx-red);
+        padding: 50px;
+    }
+
+    .contact-form-panel {
+        padding: 50px;
+    }
+}

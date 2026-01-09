@@ -1,0 +1,112 @@
+@import url("./theme.css");
+
+/* =========================================
+   MODULAR SERVICES GRID
+   ========================================= */
+
+.services-page {
+    padding: 60px 0;
+}
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.page-intro h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--tx-red-dark);
+}
+
+/* =========================================
+   CATEGORY HEADERS
+   ========================================= */
+
+.category-block {
+    margin-bottom: 80px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--tx-red-dark);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Accent line */
+.category-title::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: var(--tx-red);
+    opacity: 0.3;
+}
+
+/* =========================================
+   GRID SETUP
+   ========================================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: var(--tx-white);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid var(--tx-light-gray);
+    transition: all 0.3s ease;
+}
+
+.card-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    color: var(--tx-red-dark);
+    font-weight: 700;
+}
+
+/* =========================================
+   HOVER EFFECT
+   ========================================= */
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--tx-red);
+    box-shadow: var(--shadow-soft);
+}
+
+/* =========================================
+   MOBILE / Z-FOLD
+   ========================================= */
+
+@media (max-width: 768px) {
+    .page-intro h1 {
+        font-size: 2rem;
+    }
+
+    .category-title {
+        font-size: 1.2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

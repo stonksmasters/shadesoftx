@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Austin, TX</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+   <section class="booking-section">
+    <div class="container">
+        <form action="{{ route('appointments.store') }}" method="POST" class="booking-card" id="appointmentForm">
+             <div class="booking-summary">
+                <h2>Secure Your Consultation</h2>
+                <div class="service-display">
+                    <span>Selected Service:</span>
+                    <h3 id="service-text">General Inquiry</h3>
+                </div>
+            </div>
+
+            <div class="booking-form">
+                <input type="hidden" name="service_type" id="service-slug">
+                <input type="hidden" name="selected_date" id="final-date-input" required>
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" class="book-input" placeholder="First and Last Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" class="book-input" placeholder="(512) 000-0000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" class="book-input" placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Arrival Date</label>
+                    <div class="calendar-nav">
+                        <button type="button" class="nav-btn" id="prevMonth">&lt;</button>
+                        <span class="month-display" id="monthDisplay"></span>
+                        <button type="button" class="nav-btn" id="nextMonth">&gt;</button>
+                    </div>
+                    
+                    <div class="calendar-weekdays">
+                        <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid"></div>
+                </div>
+
+                <button type="submit" class="btn-submit">Confirm Appointment</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script src="booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+   <section class="contact-section">
+    <div class="container">
+        <div class="contact-wrapper">
+            
+            <div class="contact-visual">
+                <h2>Contact <span>Project Desk</span></h2>
+                
+                <div class="direct-contact">
+                    <div class="item">
+                        <label>Central Texas Office</label>
+                        <p>Jarrell, TX 76537</p>
+                    </div>
+                    <div class="item">
+                        <label>Estimates & Sales</label>
+                        <p>(512) 555-0199</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form-panel" action="/contact" method="POST">
+                <div class="form-header">
+                    <h3>Step 01</h3>
+                    <p>Tell us about your architectural glass or solar needs.</p>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="name" placeholder=" " required>
+                    <label>Full Name</label>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder=" " required>
+                        <label>Email Address</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" name="phone" placeholder=" " required>
+                        <label>Phone</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="message" rows="4" placeholder=" " required></textarea>
+                    <label>Message / Project Scope</label>
+                </div>
+
+                <button type="submit" class="cta-button">Initiate Request</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,150 @@
+@import url("./theme.css");
+
+/* =========================================
+   REVIEWS COMPONENT STYLES
+   ========================================= */
+
+.reviews-section {
+    padding: 100px 0;
+    background-color: var(--tx-light-gray);
+    width: 100%;
+    overflow: hidden;
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.reviews-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.reviews-badge {
+    background: var(--tx-red);
+    color: var(--tx-white);
+    padding: 5px 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.reviews-intro h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 15px 0;
+    color: var(--tx-red-dark);
+}
+
+/* =========================================
+   HORIZONTAL SCROLLER
+   ========================================= */
+
+.reviews-scroller {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 0 50px 0;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar */
+.reviews-scroller::-webkit-scrollbar {
+    height: 8px;
+}
+
+.reviews-scroller::-webkit-scrollbar-track {
+    background: var(--tx-light-gray);
+    border-radius: 10px;
+}
+
+.reviews-scroller::-webkit-scrollbar-thumb {
+    background: var(--tx-gray);
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.reviews-scroller::-webkit-scrollbar-thumb:hover {
+    background: var(--tx-red);
+}
+
+/* =========================================
+   REVIEW CARDS
+   ========================================= */
+
+.review-card {
+    flex: 0 0 380px;
+    background: var(--tx-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--tx-light-gray);
+
+    scroll-snap-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--tx-red);
+}
+
+.stars {
+    color: var(--tx-red);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.review-card p {
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.reviewer-info {
+    border-top: 1px solid var(--tx-light-gray);
+    padding-top: 20px;
+}
+
+.reviewer-info strong {
+    display: block;
+    color: var(--tx-red-dark);
+    font-size: 1rem;
+}
+
+.reviewer-info span {
+    font-size: 0.85rem;
+    color: var(--tx-red);
+    font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+    .reviews-intro h2 {
+        font-size: 1.8rem;
+    }
+
+    .review-card {
+        flex: 0 0 300px;
+        padding: 30px;
+    }
+
+    .reviews-scroller {
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+}

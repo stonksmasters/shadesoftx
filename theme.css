@@ -1,0 +1,21 @@
+:root {
+  /* Brand Colors */
+  --tx-red: #C8102E;
+  --tx-red-dark: #9E0B1F;
+  --tx-blue: #0033A0;
+  --tx-white: #FFFFFF;
+
+  /* Neutrals */
+  --tx-black: #000000;
+  --tx-dark: #121212;
+  --tx-gray: #2A2A2A;
+  --tx-light-gray: #E5E5E5;
+
+  /* Text */
+  --text-primary: var(--tx-white);
+  --text-secondary: var(--tx-black);
+
+  /* UI */
+  --border-color: var(--tx-red-dark);
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.4);
+}

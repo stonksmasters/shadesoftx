@@ -1,0 +1,164 @@
+@import url("./theme.css");
+
+/* =========================================
+   SERVICE DETAIL COMPONENT (Landing Page)
+   ========================================= */
+
+.service-hero {
+    padding: 80px 0;
+    background: var(--tx-black);
+    border-bottom: 1px solid var(--tx-light-gray);
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text { flex: 1.2; }
+.hero-image { flex: 1; }
+
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+.service-hero h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--tx-red-dark);
+}
+
+.service-hero .lead {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   CTA BUTTONS
+   ========================================= */
+
+.cta-row {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-main {
+    padding: 16px 32px;
+    background: var(--tx-red);
+    color: var(--tx-white);
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-main:hover {
+    background: var(--tx-red-dark);
+}
+
+.btn-secondary {
+    padding: 16px 32px;
+    background: transparent;
+    border: 2px solid var(--tx-red-dark);
+    color: var(--tx-red-dark);
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.btn-secondary:hover {
+    background: var(--tx-red-dark);
+    color: var(--tx-white);
+}
+
+/* =========================================
+   DETAILS SECTION
+   ========================================= */
+
+.details-section {
+    padding: 100px 0;
+    background: var(--tx-light-gray);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+}
+
+.details-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--tx-red-dark);
+}
+
+.details-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+/* =========================================
+   TECH SPECS BOX
+   ========================================= */
+
+.specs-box {
+    background: var(--tx-white);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--tx-light-gray);
+    box-shadow: var(--shadow-soft);
+}
+
+.specs-box h4 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--tx-red);
+}
+
+.specs-list {
+    list-style: none;
+}
+
+.specs-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--tx-light-gray);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.specs-list li strong {
+    color: var(--tx-red-dark);
+}
+
+/* =========================================
+   MOBILE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 768px) {
+    .hero-flex,
+    .details-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .service-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .cta-row {
+        flex-direction: column;
+    }
+
+    .btn-main,
+    .btn-secondary {
+        text-align: center;
+    }
+}
