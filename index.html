@@ -15,18 +15,20 @@
     <link rel="stylesheet" href="footer.css">
 </head>
 <body>
+    <!-- Skip Navigation Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Main navigation">
             <div class="container nav-flex">
                 
-                <a href="#" class="brand-logo">
+                <a href="#" class="brand-logo" aria-label="Shades of Texas - Austin">
                     SHADES<span class="light-text">OFTEXAS</span>
                     <span class="location-badge">AUSTIN</span>
                 </a>
 
-                <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
-                <label for="nav-toggle" class="nav-hamburger">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
+                <label for="nav-toggle" class="nav-hamburger" aria-label="Menu">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
@@ -46,13 +48,14 @@
     </header>
 
 
-       <section class="hero-split">
+       <main id="main-content">
+       <section class="hero-split" aria-label="Choose your service type">
         
-        <div class="hero-lane residential">
-            <div class="hero-overlay"></div>
+        <div class="hero-lane residential" role="region" aria-labelledby="residential-heading">
+            <div class="hero-overlay" aria-hidden="true"></div>
             <div class="hero-content">
                 <span class="badge">For Your Home</span>
-                <h1>Residential</h1>
+                <h1 id="residential-heading">Residential</h1>
                 <p>Residential solutions for home owners.</p>
                 <div class="hero-actions">
                     <a href="residential.html"target="_parent" class="hero-btn primary">Home Tinting Solutions</a>
@@ -60,11 +63,11 @@
             </div>
         </div>
 
-        <div class="hero-lane commercial">
-            <div class="hero-overlay"></div>
+        <div class="hero-lane commercial" role="region" aria-labelledby="commercial-heading">
+            <div class="hero-overlay" aria-hidden="true"></div>
             <div class="hero-content">
                 <span class="badge">For Your Business</span>
-                <h1>Commercial</h1>
+                <h1 id="commercial-heading">Commercial</h1>
                 <p>Professional solutions for offices, retail, and commercial properties.</p>
                 <div class="hero-actions">
                     <a href="commercial.html" target="_parent" class="hero-btn outline">Commercial Solutions</a>
@@ -73,106 +76,106 @@
         </div>
 
     </section>
-   <section class="reviews-section">
+   <section class="reviews-section" aria-labelledby="reviews-heading">
     <div class="reviews-container">
         <div class="reviews-intro">
             <span class="reviews-badge">Customer Trust</span>
-            <h2>Austin's Choice for 15+ Years</h2>
+            <h2 id="reviews-heading">Austin's Choice for 15+ Years</h2>
             <p>Swipe or scroll to see why local homeowners and businesses choose Shades of Texas.</p>
         </div>
 
-        <div class="reviews-scroller">
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+        <div class="reviews-scroller" role="list" aria-label="Customer reviews">
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"The heat reduction in our North Austin home was immediate. Professional crew and zero mess."</p>
                 <div class="reviewer-info">
                     <strong>James T.</strong>
                     <span>Residential Client</span>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+            </article>
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"Handled our 3-story office building tinting flawlessly. Energy bills dropped by 20% in the first month."</p>
                 <div class="reviewer-info">
                     <strong>Pinnacle Tech</strong>
                     <span>Commercial Client</span>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+            </article>
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"Best investment we made for our West Lake home. The glare on the TV is finally gone!"</p>
                 <div class="reviewer-info">
                     <strong>Sarah M.</strong>
                     <span>Residential Client</span>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+            </article>
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"Excellent privacy tinting for our retail storefront in The Domain. Secure and looks great."</p>
                 <div class="reviewer-info">
                     <strong>Luxe Boutique</strong>
                     <span>Commercial Client</span>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+            </article>
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"Fast quote, fair price, and the ceramic film makes a world of difference in the Texas sun."</p>
                 <div class="reviewer-info">
                     <strong>Robert K.</strong>
                     <span>Residential Client</span>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+            </article>
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"Shades of Texas did our entire school district's safety film. Highly reliable for large-scale jobs."</p>
                 <div class="reviewer-info">
                     <strong>AISD Admin</strong>
                     <span>Commercial Client</span>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+            </article>
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"We used them for our Round Rock house. The 3M film they use is top-notch quality."</p>
                 <div class="reviewer-info">
                     <strong>Elena G.</strong>
                     <span>Residential Client</span>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+            </article>
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"Reduced our HVAC load significantly at the warehouse. A must-have for Austin business owners."</p>
                 <div class="reviewer-info">
                     <strong>Starlight Logistics</strong>
                     <span>Commercial Client</span>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+            </article>
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"They were able to match the existing tint on my patio doors perfectly. Great attention to detail."</p>
                 <div class="reviewer-info">
                     <strong>Tom B.</strong>
                     <span>Residential Client</span>
                 </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
+            </article>
+            <article class="review-card" role="listitem">
+                <div class="stars" aria-label="5 star rating">★★★★★</div>
                 <p>"The best commercial tinting experience we've had in 10 years of facility management."</p>
                 <div class="reviewer-info">
                     <strong>Workspace Co.</strong>
                     <span>Commercial Client</span>
                 </div>
-            </div>
+            </article>
         </div>
     </div>
 </section>
     </section>
 
- <section class="contact-section">
+ <section class="contact-section" aria-labelledby="contact-heading">
     <div class="container">
         <div class="contact-wrapper">
             
             <div class="contact-visual">
-                <h2>Contact <span>Project Desk</span></h2>
+                <h2 id="contact-heading">Contact <span>Project Desk</span></h2>
                 
                 <div class="direct-contact">
                     <div class="item">
@@ -186,31 +189,31 @@
                 </div>
             </div>
 
-            <form class="contact-form-panel" action="/contact" method="POST">
+            <form class="contact-form-panel" action="/contact" method="POST" aria-label="Contact form">
                 <div class="form-header">
                     <h3>Step 01</h3>
                     <p>Tell us about your architectural glass or solar needs.</p>
                 </div>
 
                 <div class="input-group">
-                    <input type="text" name="name" placeholder=" " required>
-                    <label>Full Name</label>
+                    <input type="text" id="contact-name" name="name" placeholder=" " required aria-required="true">
+                    <label for="contact-name">Full Name</label>
                 </div>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                     <div class="input-group">
-                        <input type="email" name="email" placeholder=" " required>
-                        <label>Email Address</label>
+                        <input type="email" id="contact-email" name="email" placeholder=" " required aria-required="true">
+                        <label for="contact-email">Email Address</label>
                     </div>
                     <div class="input-group">
-                        <input type="tel" name="phone" placeholder=" " required>
-                        <label>Phone</label>
+                        <input type="tel" id="contact-phone" name="phone" placeholder=" " required aria-required="true">
+                        <label for="contact-phone">Phone</label>
                     </div>
                 </div>
 
                 <div class="input-group">
-                    <textarea name="message" rows="4" placeholder=" " required></textarea>
-                    <label>Message / Project Scope</label>
+                    <textarea id="contact-message" name="message" rows="4" placeholder=" " required aria-required="true"></textarea>
+                    <label for="contact-message">Message / Project Scope</label>
                 </div>
 
                 <button type="submit" class="cta-button">Initiate Request</button>
@@ -219,35 +222,36 @@
         </div>
     </div>
 </section>
+</main>
 <footer class="main-footer">
     <div class="container">
         <div class="footer-grid">
             
             <div class="footer-brand">
-                <a href="index.html" class="logo">SHADES<span>OF</span>TEXAS</a>
+                <a href="index.html" class="logo" aria-label="Shades of Texas - Home">SHADES<span>OF</span>TEXAS</a>
                 <p>Austin’s premier destination for high-performance solar protection and architectural glass solutions since 1989.</p>
             </div>
 
-            <div class="footer-col">
+            <nav class="footer-col" aria-label="Solutions">
                 <h4>Solutions</h4>
                 <a href="residential.html">Residential Tint</a>
                 <a href="commercial.html">Commercial Film</a>
                 <a href="pella.html">Pella® Windows</a>
-            </div>
+            </nav>
 
-            <div class="footer-col">
+            <nav class="footer-col" aria-label="Company information">
                 <h4>Company</h4>
                 <a href="about.html">Our Story</a>
                 <a href="gallery.html">Project Gallery</a>
                 <a href="contact.html">Contact Us</a>
-            </div>
+            </nav>
 
-            <div class="footer-col">
+            <nav class="footer-col" aria-label="Contact information">
                 <h4>Contact</h4>
-                <a href="tel:5125550199">(512) 555-0199</a>
+                <a href="tel:5125550199" aria-label="Call us at 5 1 2 5 5 5 0 1 9 9">(512) 555-0199</a>
                 <a href="mailto:hello@shadesoftx.com">Email Us</a>
                 <a href="booking.html">Book Estimate</a>
-            </div>
+            </nav>
 
         </div>
 

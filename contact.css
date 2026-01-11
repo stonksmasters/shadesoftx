@@ -76,7 +76,7 @@
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #777;
+    color: #AAA; /* Improved contrast for accessibility */
     display: block;
     margin-bottom: 6px;
 }
@@ -152,7 +152,7 @@
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: 800;
-    color: #888;
+    color: #AAA; /* Improved contrast for accessibility */
     letter-spacing: 1px;
 }
 
