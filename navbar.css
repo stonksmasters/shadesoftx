@@ -79,22 +79,54 @@ a { text-decoration: none; transition: all 0.25s ease; }
 
 /* Desktop and larger screens: override mobile-first rules */
 @media (min-width: 769px) {
-    .top-announcement-bar { font-size: 0.9rem; }
-    .main-nav { height: 72px; }
+    /* Announcement & header polish */
+    .top-announcement-bar { font-size: 0.95rem; padding: 10px 0; }
+    .site-header { background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.92)); backdrop-filter: blur(6px); }
+
+    /* Nav sizing and layout */
+    .main-nav { height: 76px; }
+    .nav-flex { align-items: center; justify-content: space-between; gap: 24px; }
     .nav-hamburger { display: none; }
-    .nav-links { position: static; display: flex; flex-direction: row; gap: 28px; max-height: none; background: transparent; border-top: none; align-items: center; }
+
+    /* Inline nav links with comfortable spacing and hover affordances */
+    .nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        max-height: none;
+        background: transparent;
+        border-top: none;
+        align-items: center;
+        margin-left: auto;
+    }
+
     .nav-links li { border: 0; }
-    .nav-links li a { color: var(--tx-white); padding: 0; font-weight: 600; font-size: 0.95rem; position: relative; }
+    .nav-links li a {
+        color: var(--tx-white);
+        padding: 8px 10px;
+        font-weight: 700;
+        font-size: 0.98rem;
+        position: relative;
+        border-radius: 8px;
+        transition: background 0.18s ease, transform 0.12s ease;
+    }
 
-    /* Subtle underline hover (desktop) */
-    .nav-links li a::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 0; height: 2px; background: var(--tx-red); transition: width 0.28s ease; }
-    .nav-links li a:hover::after { width: 100%; }
+    .nav-links li a:hover { background: rgba(255,255,255,0.03); transform: translateY(-2px); }
 
-    .container { padding: 0 20px; }
-    .brand-logo { font-size: 1.5rem; color: var(--tx-red-dark); }
-    .btn-primary { width: auto; padding: 10px 24px; }
+    /* Subtle underline hover (desktop) — preserved but less obtrusive */
+    .nav-links li a::after { content: ""; position: absolute; left: 12px; bottom: -8px; width: 0; height: 2px; background: var(--tx-red); transition: width 0.28s ease; }
+    .nav-links li a:hover::after { width: calc(100% - 24px); }
 
-    /* CTA hover (desktop) */
-    .btn-primary:hover { background-color: var(--tx-red-dark); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(200,16,46,0.35); }
+    /* Spacing tweaks for larger layouts */
+    .container { padding: 0 28px; max-width: 1300px; }
+    .brand-logo { font-size: 1.65rem; color: var(--tx-red-dark); letter-spacing: 0.5px; }
+
+    /* CTA styling for desktop: compact, elevated button */
+    .btn-primary { width: auto; padding: 10px 22px; border-radius: 10px; box-shadow: 0 8px 20px rgba(200,16,46,0.15); }
+    .btn-primary:hover { background-color: var(--tx-red-dark); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(200,16,46,0.28); }
+
+    /* Provide a subtle divider between announcement and nav on large screens */
+    .top-announcement-bar { border-bottom: 1px solid rgba(255,255,255,0.03); }
 }
 
