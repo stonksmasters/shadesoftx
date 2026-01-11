@@ -158,3 +158,25 @@
         padding-right: 20px;
     }
 }
+
+/* Mobile-first overrides (non-invasive): improve touch targets and spacing */
+@media (max-width: 1024px) {
+    .main-footer { padding: 56px 0 28px; border-top: 1px solid rgba(255,255,255,0.04); }
+    .footer-grid { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 0 18px; margin-bottom: 28px; }
+    .footer-brand .logo { font-size: 1.25rem; margin-bottom: 6px; }
+    .footer-brand p { font-size: 0.95rem; line-height: 1.6; max-width: none; }
+    .footer-col h4 { margin-bottom: 12px; }
+    .footer-col a { margin-bottom: 12px; padding: 8px 6px; border-radius: 6px; }
+    .footer-col a:hover { transform: translateX(6px); }
+    .footer-bottom { padding-top: 18px; gap: 10px; }
+}
+
+@media (max-width: 600px) {
+    .footer-grid { padding: 0 14px; }
+    .footer-brand .logo { font-size: 1.1rem; }
+    .footer-bottom { padding-left: 14px; padding-right: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-col a { transition: none !important; }
+}

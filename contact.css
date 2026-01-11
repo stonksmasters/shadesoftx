@@ -197,7 +197,8 @@
 
 /* =========================================
    RESPONSIVE
-   ========================================= */
+   =========================================
+*/
 
 @media (max-width: 1100px) {
     .contact-wrapper {
@@ -213,4 +214,18 @@
     .contact-form-panel {
         padding: 50px;
     }
+}
+
+/* Non-invasive mobile improvements (small screens only) */
+@media (max-width: 768px) {
+    .contact-section { padding: 80px 0 48px; }
+    .contact-wrapper { padding: 0 16px; }
+    .contact-visual { padding: 40px; border-radius: 8px; box-shadow: 15px 15px 0px var(--tx-red); }
+    .contact-visual h2 { font-size: 2.0rem; }
+    .contact-visual h2 span { font-size: 1.2rem; }
+    .contact-form-panel { padding: 28px; border-radius: 8px; }
+    .input-group { margin-bottom: 20px; }
+    .input-group input, .input-group textarea { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .input-group textarea { min-height: 100px; }
+    .cta-button { display: block; width: 100%; padding: 14px; border-radius: 8px; text-align: center; }
 }

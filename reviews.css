@@ -134,17 +134,57 @@
    ========================================= */
 
 @media (max-width: 768px) {
-    .reviews-intro h2 {
-        font-size: 1.8rem;
-    }
+    .reviews-section { padding: 36px 0; }
 
-    .review-card {
-        flex: 0 0 300px;
-        padding: 30px;
-    }
+    .reviews-container { padding: 0 14px; }
 
+    .reviews-intro { margin-bottom: 28px; }
+    .reviews-intro h2 { font-size: 1.6rem; line-height: 1.15; }
+    .reviews-intro p { font-size: 0.95rem; color: rgba(0,0,0,0.6); }
+
+    /* Make scroller feel like cards stack with generous snap */
     .reviews-scroller {
-        gap: 20px;
-        padding-bottom: 30px;
+        gap: 18px;
+        padding: 12px 8px 34px 8px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
     }
+
+    /* Larger, touch-friendly cards */
+    .review-card {
+        flex: 0 0 86%;
+        padding: 28px;
+        border-radius: 14px;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+        border: 0; /* subtle cleaner look on mobile */
+    }
+
+    .review-card:hover { transform: none; }
+
+    .stars { font-size: 1.15rem; margin-bottom: 12px; }
+
+    .review-card p {
+        font-size: 1rem;
+        color: rgba(0,0,0,0.75);
+        margin-bottom: 18px;
+    }
+
+    .reviewer-info { padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.05); }
+
+    .reviewer-info strong { font-size: 0.98rem; }
+    .reviewer-info span { font-size: 0.8rem; }
+
+    /* Hide native scrollbar on mobile while preserving scroll */
+    .reviews-scroller { scrollbar-width: none; }
+    .reviews-scroller::-webkit-scrollbar { display: none; }
+
+    /* Give the scroller a gentle rounded track look on larger phones */
+    @supports (mask-image: linear-gradient(#000, #000)) {
+        .reviews-scroller { padding-inline: 12px; }
+    }
+}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .reviews-scroller, .review-card { transition: none !important; }
 }
