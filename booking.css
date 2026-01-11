@@ -83,7 +83,7 @@
     font-size: 0.75rem;
     margin-bottom: 8px;
     letter-spacing: 1px;
-    color: var(--text-secondary);
+    color: #E5E5E5; /* Improved contrast on dark background */
 }
 
 /* Inputs */
@@ -99,7 +99,7 @@
 }
 
 .book-input::placeholder {
-    color: #777;
+    color: #999; /* Improved contrast for accessibility */
 }
 
 .book-input:focus {
@@ -147,7 +147,7 @@
     text-align: center;
     font-weight: 800;
     font-size: 0.7rem;
-    color: #888;
+    color: #AAA; /* Improved contrast for accessibility */
     margin-bottom: 5px;
     text-transform: uppercase;
 }

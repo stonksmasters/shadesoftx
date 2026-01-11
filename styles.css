@@ -1,6 +1,29 @@
 @import url("./theme.css");
 
 /* =========================================
+   ACCESSIBILITY - SKIP NAVIGATION LINK
+   ========================================= */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--tx-red-dark);
+    color: var(--tx-white);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 700;
+    z-index: 9999;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--tx-white);
+    outline-offset: 2px;
+}
+
+/* =========================================
    HERO FRAME CONTAINER
    ========================================= */
 

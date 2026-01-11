@@ -23,7 +23,7 @@
 }
 
 .reviews-badge {
-    background: var(--tx-red);
+    background: var(--tx-red-dark); /* Improved contrast for accessibility */
     color: var(--tx-white);
     padding: 5px 15px;
     font-size: 0.75rem;

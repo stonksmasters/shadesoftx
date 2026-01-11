@@ -72,7 +72,7 @@ html, body {
 
 .badge {
     display: inline-block;
-    background: var(--tx-red);
+    background: var(--tx-red-dark); /* Improved contrast for accessibility */
     color: var(--tx-white);
     padding: 6px 18px;
     font-size: 0.75rem;
