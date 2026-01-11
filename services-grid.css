@@ -85,7 +85,8 @@
 
 /* =========================================
    HOVER EFFECT
-   ========================================= */
+   =========================================
+*/
 
 .service-card:hover {
     transform: translateY(-5px);
@@ -94,19 +95,22 @@
 }
 
 /* =========================================
-   MOBILE / Z-FOLD
-   ========================================= */
+   MOBILE / Z-FOLD (non-invasive)
+   =========================================
+*/
 
 @media (max-width: 768px) {
-    .page-intro h1 {
-        font-size: 2rem;
-    }
+    .page-intro h1 { font-size: 2rem; }
+    .category-title { font-size: 1.2rem; }
+    .services-grid { grid-template-columns: 1fr; gap: 18px; }
 
-    .category-title {
-        font-size: 1.2rem;
-    }
+    /* Slight mobile polish without changing desktop behaviour */
+    .service-card { border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .card-image { height: 140px; }
+    .card-content { padding: 16px; }
+    .card-content h3 { font-size: 1.05rem; }
+}
 
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
+@media (prefers-reduced-motion: reduce) {
+    .service-card { transition: none !important; }
 }

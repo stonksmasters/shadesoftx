@@ -216,16 +216,81 @@
 }
 
 /* =========================================
-   MOBILE
+   MOBILE (only - preserves desktop styles)
    ========================================= */
 
 @media (max-width: 800px) {
     .booking-card {
         flex-direction: column;
+        width: calc(100% - 32px);
+        margin: 16px auto;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.45);
     }
 
     .booking-summary,
     .booking-form {
-        padding: 30px;
+        padding: 20px;
     }
+
+    /* Centered summary and tighter headings for phones */
+    .booking-summary {
+        text-align: center;
+        padding-top: 28px;
+        padding-bottom: 18px;
+    }
+
+    .booking-summary h2 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+        color: var(--tx-red);
+        letter-spacing: 1px;
+    }
+
+    .service-display {
+        margin-top: 18px;
+        border-top: none;
+        padding-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .service-display span { font-size: 0.7rem; }
+    .service-display h3 { margin: 0; font-size: 1.05rem; }
+
+    /* Touch-friendly inputs */
+    .book-input {
+        padding: 14px;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .book-input::placeholder { color: #999; }
+
+    /* Calendar tweaks for small screens */
+    .calendar-weekdays { font-size: 0.65rem; margin-bottom: 8px; }
+    .calendar-grid { gap: 6px; border-radius: 10px; overflow: hidden; }
+    .day {
+        aspect-ratio: 1 / 1;
+        min-height: 48px;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+    }
+
+    .day:hover:not(.past) { transform: translateY(-2px); }
+
+    /* Primary CTA prominence */
+    .btn-submit {
+        padding: 16px;
+        font-size: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(200,16,46,0.18);
+    }
+
+    /* Ensure form flows nicely on narrow phones */
+    .booking-form { padding-bottom: 24px; }
 }

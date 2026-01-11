@@ -5,8 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking | Austin, TX</title>
     <link rel="stylesheet" href="booking.css">
+     <link rel="stylesheet" href="navbar.css">
+      <link rel="stylesheet" href="footer.css">
 </head>
 <body>
+      <header class="site-header">
+            <nav class="main-nav">
+            <div class="container nav-flex">
+                
+                <a href="index.html" class="brand-logo">
+                    SHADES<span class="light-text">OFTEXAS</span>
+                    <span class="location-badge">AUSTIN</span>
+                </a>
+
+                <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+                <label for="nav-toggle" class="nav-hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+
+                <ul class="nav-links">
+                    <li><a href="residential.html">Residential</a></li>
+                    <li><a href="commercial.html">Commercial</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li class="cta-container">
+                        <a href="#quote" class="btn-primary">Get Free Estimate</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
    <section class="booking-section">
     <div class="container">
         <form action="{{ route('appointments.store') }}" method="POST" class="booking-card" id="appointmentForm">
@@ -56,7 +86,44 @@
         </form>
     </div>
 </section>
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div class="footer-brand">
+                <a href="index.html" class="logo">SHADES<span>OF</span>TEXAS</a>
+                <p>Austin’s premier destination for high-performance solar protection and architectural glass solutions since 1989.</p>
+            </div>
 
+            <div class="footer-col">
+                <h4>Solutions</h4>
+                <a href="residential.html">Residential Tint</a>
+                <a href="commercial.html">Commercial Film</a>
+                <a href="pella.html">Pella® Windows</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">Our Story</a>
+                <a href="gallery.html">Project Gallery</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="tel:5125550199">(512) 555-0199</a>
+                <a href="mailto:hello@shadesoftx.com">Email Us</a>
+                <a href="booking.html">Book Estimate</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Shades of Texas. All Rights Reserved.</p>
+            <p>Built for Austin Excellence</p>
+        </div>
+    </div>
+</footer>
 <script src="booking.js"></script>
 </body>
 </html>
