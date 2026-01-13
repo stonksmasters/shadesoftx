@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shades of Texas | Austin's Window Specialists</title>
     
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="hero.css">
-    <link rel="stylesheet" href="services-grid.css">
-    <link rel="stylesheet" href="booking.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="reviews.css">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/services-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/booking.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/reviews.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 </head>
 <body>
     <!-- Skip Navigation Link for Keyboard Accessibility -->
@@ -35,9 +35,9 @@
                 </label>
 
                 <ul class="nav-links">
-                    <li><a href="residential.html">Residential</a></li>
-                    <li><a href="commercial.html">Commercial</a></li>
-                    <li><a href="re">Reviews</a></li>
+                    <li><a href="{{ url('/residential') }}">Residential</a></li>
+                    <li><a href="{{ url('/commercial') }}">Commercial</a></li>
+                    <li><a href="{{ url('/reviews') }}">Reviews</a></li>
                     <li class="cta-container">
                         <a href="#quote" class="btn-primary">Get Free Estimate</a>
                     </li>
@@ -58,7 +58,7 @@
                 <h1 id="residential-heading">Residential</h1>
                 <p>Residential solutions for home owners.</p>
                 <div class="hero-actions">
-                    <a href="residential.html" target="_parent" class="hero-btn primary">Home Tinting Solutions</a>
+                    <a href="{{ url('/residential') }}" target="_parent" class="hero-btn primary">Home Tinting Solutions</a>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
                 <h1 id="commercial-heading">Commercial</h1>
                 <p>Professional solutions for offices, retail, and commercial properties.</p>
                 <div class="hero-actions">
-                    <a href="commercial.html" target="_parent" class="hero-btn outline">Commercial Solutions</a>
+                    <a href="{{ url('/commercial') }}" target="_parent" class="hero-btn outline">Commercial Solutions</a>
                 </div>
             </div>
         </div>
@@ -227,29 +227,29 @@
         <div class="footer-grid">
             
             <div class="footer-brand">
-                <a href="index.html" class="logo" aria-label="Shades of Texas - Home">SHADES<span>OF</span>TEXAS</a>
+                <a href="{{ url('/') }}" class="logo" aria-label="Shades of Texas - Home">SHADES<span>OF</span>TEXAS</a>
                 <p>Austin’s premier destination for high-performance solar protection and architectural glass solutions since 1989.</p>
             </div>
 
             <nav class="footer-col" aria-label="Solutions">
                 <h4>Solutions</h4>
-                <a href="residential.html">Residential Tint</a>
-                <a href="commercial.html">Commercial Film</a>
-                <a href="pella.html">Pella® Windows</a>
+                <a href="{{ url('/residential') }}">Residential Tint</a>
+                <a href="{{ url('/commercial') }}">Commercial Film</a>
+                <a href="{{ url('/pella') }}">Pella® Windows</a>
             </nav>
 
             <nav class="footer-col" aria-label="Company information">
                 <h4>Company</h4>
-                <a href="about.html">Our Story</a>
-                <a href="gallery.html">Project Gallery</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="{{ url('/about') }}">Our Story</a>
+                <a href="{{ url('/gallery') }}">Project Gallery</a>
+                <a href="{{ url('/contact') }}">Contact Us</a>
             </nav>
 
             <nav class="footer-col" aria-label="Contact information">
                 <h4>Contact</h4>
                 <a href="tel:5125550199" aria-label="Call us at 512-555-0199">(512) 555-0199</a>
                 <a href="mailto:hello@shadesoftx.com">Email Us</a>
-                <a href="booking.html">Book Estimate</a>
+                <a href="{{ url('/booking') }}">Book Estimate</a>
             </nav>
 
         </div>
@@ -261,6 +261,6 @@
     </div>
 </footer>
 
-    <script src="booking.js"></script>
+    <script src="{{ asset('js/booking.js') }}"></script>
 </body>
 </html>

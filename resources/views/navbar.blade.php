@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shades of Texas - Austin Mockup</title>
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 </head>
 <body>
 
@@ -32,9 +32,9 @@
                 </label>
 
                 <ul class="nav-links">
-                    <li><a href="residential.html">Residential</a></li>
-                    <li><a href="commercial.html">Commercial</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="{{ url('/residential') }}">Residential</a></li>
+                    <li><a href="{{ url('/commercial') }}">Commercial</a></li>
+                    <li><a href="{{ url('/reviews') }}">Reviews</a></li>
                     <li class="cta-container">
                         <a href="#quote" class="btn-primary">Get Free Estimate</a>
                     </li>

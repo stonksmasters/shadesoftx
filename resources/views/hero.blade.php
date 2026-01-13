@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero Component Mockup</title>
-    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
                 <h1>Residential</h1>
                 <p>Residential solutions for home owners.</p>
                 <div class="hero-actions">
-                    <a href="residential.html"target="_parent" class="hero-btn primary">Home Tinting Solutions</a>
+                    <a href="{{ url('/residential') }}"target="_parent" class="hero-btn primary">Home Tinting Solutions</a>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <h1>Commercial</h1>
                 <p>Professional solutions for offices, retail, and commercial properties.</p>
                 <div class="hero-actions">
-                    <a href="commercial.html" target="_parent" class="hero-btn outline">Commercial Solutions</a>
+                    <a href="{{ url('/commercial') }}" target="_parent" class="hero-btn outline">Commercial Solutions</a>
                 </div>
             </div>
         </div>
