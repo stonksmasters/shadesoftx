@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
 </head>
 <body>
    <section class="contact-section">

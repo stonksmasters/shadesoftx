@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commercial Solutions | Austin, TX | Shades of Texas</title>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="services-grid.css">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/services-grid.css') }}">
 </head>
 <body>
       <header class="site-header">
         <nav class="main-nav">
             <div class="container nav-flex">
                 
-                <a href="index.html" class="brand-logo">
+                <a href="{{ url('/') }}" class="brand-logo">
                     SHADES<span class="light-text">OFTEXAS</span>
                     <span class="location-badge">AUSTIN</span>
                 </a>
@@ -25,9 +25,9 @@
                 </label>
 
                 <ul class="nav-links">
-                    <li><a href="residential.html">Residential</a></li>
-                    <li><a href="commercial.html">Commercial</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="{{ url('/residential') }}">Residential</a></li>
+                    <li><a href="{{ url('/commercial') }}">Commercial</a></li>
+                    <li><a href="{{ url('/reviews') }}">Reviews</a></li>
                     <li class="cta-container">
                         <a href="#quote" class="btn-primary">Get Free Estimate</a>
                     </li>
@@ -48,15 +48,15 @@
                 <h2 class="category-title">Solar Control & Safety</h2>
                 <div class="services-grid">
                     <a href="commercial-sun-control.html" class="service-card">
-                        <div class="card-image" style="background-image: url('assets/commercialawning.jpg');"></div>
+                        <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Sun Control Film</h3></div>
                     </a>
                     <a href="commercial-security-film.html" class="service-card">
-                        <div class="card-image" style="background-image: url('assets/commercialawning.jpg');"></div>
+                        <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Safety & Security Film</h3></div>
                     </a>
                     <a href="commercial-smart-tint.html" class="service-card">
-                        <div class="card-image" style="background-image: url('assets/commercialawning.jpg');"></div>
+                        <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>SmartTint</h3></div>
                     </a>
                 </div>
@@ -66,11 +66,11 @@
                 <h2 class="category-title">Patio Screens & Awnings</h2>
                 <div class="services-grid">
                     <a href="commercial-awnings.html" class="service-card">
-                        <div class="card-image" style="background-image: url('assets/commercialawning.jpg');"></div>
+                        <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Patio Awnings</h3></div>
                     </a>
                     <a href="commercial-screens.html" class="service-card">
-                        <div class="card-image" style="background-image: url('assets/commercialawning.jpg');"></div>
+                        <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Patio Screens</h3></div>
                     </a>
                 </div>
@@ -80,7 +80,7 @@
                 <h2 class="category-title">Glass & Windows</h2>
                 <div class="services-grid">
                     <a href="commercial-glazing.html" class="service-card">
-                        <div class="card-image" style="background-image: url('assets/commercialawning.jpg');"></div>
+                        <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Commercial Glazing</h3></div>
                     </a>
                 </div>
@@ -90,7 +90,7 @@
                 <h2 class="category-title">Window Treatments</h2>
                 <div class="services-grid">
                     <a href="commercial-roller-shades.html" class="service-card">
-                        <div class="card-image" style="background-image: url('assets/commercialawning.jpg');"></div>
+                        <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Roller Shades</h3></div>
                     </a>
                 </div>
