@@ -24,7 +24,24 @@
                 </div>
             </div>
 
+            @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+            @endif
+
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+
             <form class="contact-form-panel" action="/contact" method="POST">
+                @csrf
                 <div class="form-header">
                     <h3>Step 01</h3>
                     <p>Tell us about your architectural glass or solar needs.</p>

@@ -39,7 +39,24 @@
     </header>
    <section class="booking-section">
     <div class="container">
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
+
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+
         <form action="{{ route('appointments.store') }}" method="POST" class="booking-card" id="appointmentForm">
+            @csrf
              <div class="booking-summary">
                 <h2>Secure Your Consultation</h2>
                 <div class="service-display">

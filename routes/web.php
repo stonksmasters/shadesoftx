@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,8 +71,8 @@ Route::get('/pella', function () {
     return view('pella');
 });
 
+// POST route for booking form submission
+Route::post('/appointments', [FormController::class, 'store'])->name('appointments.store');
+
 // POST route for contact form submission
-Route::post('/contact', function () {
-    // Handle contact form submission
-    return redirect('/')->with('success', 'Message sent successfully!');
-});
+Route::post('/contact', [FormController::class, 'contact'])->name('contact.submit');
