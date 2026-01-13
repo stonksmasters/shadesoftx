@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/reviews.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/alerts.css') }}">
 </head>
 <body>
     <!-- Skip Navigation Link for Keyboard Accessibility -->

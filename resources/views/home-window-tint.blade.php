@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/service-detail.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/alerts.css') }}">
 </head>
 <header class="site-header">
             <nav class="main-nav">

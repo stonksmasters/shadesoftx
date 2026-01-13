@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/booking.css') }}">
      <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
       <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+      <link rel="stylesheet" href="{{ asset('css/alerts.css') }}">
 </head>
 <body>
       <header class="site-header">
