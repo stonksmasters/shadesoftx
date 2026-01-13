@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appointment;
+use App\Models\ContactMessage;
 use Illuminate\Http\Request;
 
 class FormController extends Controller
@@ -11,7 +13,7 @@ class FormController extends Controller
         // Validate form input
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'phone' => 'required|string',
+            'phone' => 'required|string|regex:/^[\d\-\+\(\)\s]+$/',
             'email' => 'required|email',
             'service_type' => 'required|string',
             'selected_date' => 'required|date',
@@ -31,7 +33,7 @@ class FormController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
-            'phone' => 'required|string',
+            'phone' => 'required|string|regex:/^[\d\-\+\(\)\s]+$/',
             'message' => 'required|string|max:1000',
         ]);
 

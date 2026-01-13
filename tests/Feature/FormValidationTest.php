@@ -84,4 +84,19 @@ class FormValidationTest extends TestCase
 
         $response->assertSessionHasErrors(['message']);
     }
+
+    /**
+     * Test contact form validation with invalid phone number.
+     */
+    public function test_contact_form_validation_with_invalid_phone(): void
+    {
+        $response = $this->post('/contact', [
+            'name' => 'Jane Smith',
+            'email' => 'jane@example.com',
+            'phone' => 'abc-def-ghij', // Invalid phone format
+            'message' => 'Test message',
+        ]);
+
+        $response->assertSessionHasErrors(['phone']);
+    }
 }
