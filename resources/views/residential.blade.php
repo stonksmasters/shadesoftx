@@ -48,15 +48,15 @@
             <div class="category-block">
                 <h2 class="category-title">Tint & Film</h2>
                 <div class="services-grid">
-                    <a href="home-window-tint.html" class="service-card">
+                    <a href="{{ url('./home-window-tint.html') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Home Window Tint</h3></div>
                     </a>
-                    <a href="safety-film.html" class="service-card">
+                    <a href="{{ url('./safety-film.html') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Safety & Security Film</h3></div>
                     </a>
-                    <a href="smart-tint.html" class="service-card">
+                    <a href="{{ url('./smart-tint.html') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>SmartTint</h3></div>
                     </a>
