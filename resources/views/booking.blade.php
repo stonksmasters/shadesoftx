@@ -142,6 +142,6 @@
         </div>
     </div>
 </footer>
-<script src="booking.js"></script>
+<script src="{{ asset('js/booking.js') }}"></script>
 </body>
 </html>
