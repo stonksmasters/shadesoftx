@@ -32,7 +32,7 @@ class AnalyticsController extends Controller
 
         // Hourly traffic
         $hourlyTraffic = PageView::where('created_at', '>=', $startDate)
-            ->select(DB::raw('HOUR(created_at) as hour'), DB::raw('count(*) as views'))
+            ->select(DB::raw("strftime('%H', created_at) as hour"), DB::raw('count(*) as views'))
             ->groupBy('hour')
             ->orderBy('hour')
             ->get()
