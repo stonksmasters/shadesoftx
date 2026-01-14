@@ -46,7 +46,7 @@
                 <h1>Home Window <br>Tinting</h1>
                 <p class="lead">Protect your interior, lower your energy bills, and experience total comfort in every room of your Austin home.</p>
                 <div class="cta-row">
-                    <a href="{{ url('/booking') }}" class="btn btn-main">Book Free Estimate</a>
+                    <a href="http://127.0.0.1:8000/booking? service=home-window-tint" class="btn btn-main">Book Free Estimate</a>
                     <a href="#details" class="btn btn-secondary">View Technical Specs</a>
                 </div>
             </div>

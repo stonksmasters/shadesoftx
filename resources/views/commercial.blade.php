@@ -47,15 +47,15 @@
             <div class="category-block">
                 <h2 class="category-title">Solar Control & Safety</h2>
                 <div class="services-grid">
-                    <a href="commercial-sun-control.html" class="service-card">
+                    <a href="{{ url('/booking?service=commercial-sun-control') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Sun Control Film</h3></div>
                     </a>
-                    <a href="commercial-security-film.html" class="service-card">
+                    <a href="{{ url('/booking?service=commercial-security-film') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Safety & Security Film</h3></div>
                     </a>
-                    <a href="commercial-smart-tint.html" class="service-card">
+                    <a href="{{ url('/booking?service=commercial-smart-tint') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>SmartTint</h3></div>
                     </a>
@@ -65,11 +65,11 @@
             <div class="category-block">
                 <h2 class="category-title">Patio Screens & Awnings</h2>
                 <div class="services-grid">
-                    <a href="commercial-awnings.html" class="service-card">
+                    <a href="{{ url('/booking?service=commercial-awnings') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Patio Awnings</h3></div>
                     </a>
-                    <a href="commercial-screens.html" class="service-card">
+                    <a href="{{ url('/booking?service=commercial-screens') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Patio Screens</h3></div>
                     </a>
@@ -79,7 +79,7 @@
             <div class="category-block">
                 <h2 class="category-title">Glass & Windows</h2>
                 <div class="services-grid">
-                    <a href="commercial-glazing.html" class="service-card">
+                    <a href="{{ url('/booking?service=commercial-glazing') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Commercial Glazing</h3></div>
                     </a>
@@ -89,7 +89,7 @@
             <div class="category-block">
                 <h2 class="category-title">Window Treatments</h2>
                 <div class="services-grid">
-                    <a href="commercial-roller-shades.html" class="service-card">
+                    <a href="{{ url('/booking?service=commercial-roller-shades') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/commercialawning.jpg') }}');"></div>
                         <div class="card-content"><h3>Roller Shades</h3></div>
                     </a>
