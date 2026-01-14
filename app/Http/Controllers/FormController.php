@@ -19,6 +19,9 @@ class FormController extends Controller
             'selected_date' => 'required|date',
         ]);
 
+        // Add source page from referer
+        $validated['source_page'] = $request->header('referer');
+
         // Save the appointment to the database
         Appointment::create($validated);
 
