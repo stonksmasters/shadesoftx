@@ -66,19 +66,19 @@
             <div class="category-block">
                 <h2 class="category-title">Window Treatments</h2>
                 <div class="services-grid">
-                    <a href="shades.html" class="service-card">
+                    <a href="{{ url('/shades') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Window Shades</h3></div>
                     </a>
-                    <a href="shutters.html" class="service-card">
+                    <a href="{{ url('/shutters') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Window Shutters</h3></div>
                     </a>
-                    <a href="blinds.html" class="service-card">
+                    <a href="{{ url('/blinds') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Window Blinds</h3></div>
                     </a>
-                    <a href="storm-shutters.html" class="service-card">
+                    <a href="{{ url('/storm-shutters') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Safety / Storm Shutters</h3></div>
                     </a>
@@ -88,15 +88,15 @@
             <div class="category-block">
                 <h2 class="category-title">Outdoor Living</h2>
                 <div class="services-grid">
-                    <a href="shade-structures.html" class="service-card">
+                    <a href="{{ url('/shade-structures') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Shade Structures</h3></div>
                     </a>
-                    <a href="awnings.html" class="service-card">
+                    <a href="{{ url('/awnings') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Patio Awnings</h3></div>
                     </a>
-                    <a href="screens.html" class="service-card">
+                    <a href="{{ url('/screens') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Patio Screens</h3></div>
                     </a>
@@ -106,19 +106,19 @@
             <div class="category-block">
                 <h2 class="category-title">Glass & Windows</h2>
                 <div class="services-grid">
-                    <a href="pella-windows.html" class="service-card">
+                    <a href="{{ url('/pella-windows') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Pella® Windows</h3></div>
                     </a>
-                    <a href="pella-doors.html" class="service-card">
+                    <a href="{{ url('/pella-doors') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Pella® Doors</h3></div>
                     </a>
-                    <a href="frameless-showers.html" class="service-card">
+                    <a href="{{ url('/frameless-showers') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Frameless Showers</h3></div>
                     </a>
-                    <a href="window-cleaning.html" class="service-card">
+                    <a href="{{ url('/window-cleaning') }}" class="service-card">
                         <div class="card-image" style="background-image: url('{{ asset('images/awning.jpg') }}');"></div>
                         <div class="card-content"><h3>Window Cleaning</h3></div>
                     </a>
