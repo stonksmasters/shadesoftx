@@ -12,6 +12,8 @@ class AdminUserSeeder extends Seeder
      */
     public function run(): void
     {
+        // Note: Default password is 'password123' for initial setup
+        // For production, change this password immediately after first login
         \App\Models\AdminUser::create([
             'name' => 'Admin',
             'email' => 'admin@shadesoftx.com',

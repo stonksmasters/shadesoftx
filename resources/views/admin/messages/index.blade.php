@@ -42,7 +42,7 @@
                 {{ $message->email }} • {{ $message->phone }}
             </div>
             <div class="message-preview">
-                {{ Str::limit($message->message, 120) }}
+                {{ \Illuminate\Support\Str::limit($message->message, 120) }}
             </div>
             <div class="message-footer">
                 <span class="status-badge status-{{ $message->status }}">{{ ucfirst($message->status) }}</span>

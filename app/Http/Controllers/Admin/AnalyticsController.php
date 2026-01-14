@@ -30,13 +30,17 @@ class AnalyticsController extends Controller
             ->get()
             ->pluck('views', 'date');
 
-        // Hourly traffic
-        $hourlyTraffic = PageView::where('created_at', '>=', $startDate)
-            ->select(DB::raw("strftime('%H', created_at) as hour"), DB::raw('count(*) as views'))
-            ->groupBy('hour')
-            ->orderBy('hour')
+        // Hourly traffic (using database-agnostic approach)
+        $hourlyTrafficRaw = PageView::where('created_at', '>=', $startDate)
             ->get()
-            ->pluck('views', 'hour');
+            ->groupBy(function ($item) {
+                return $item->created_at->format('H');
+            })
+            ->map(function ($group) {
+                return $group->count();
+            });
+        
+        $hourlyTraffic = $hourlyTrafficRaw->sortKeys();
 
         // Top pages
         $topPages = PageView::where('created_at', '>=', $startDate)

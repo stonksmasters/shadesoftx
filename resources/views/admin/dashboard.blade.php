@@ -133,7 +133,7 @@
                     @forelse($recentMessages as $message)
                         <tr>
                             <td>{{ $message->name }}</td>
-                            <td>{{ Str::limit($message->message, 40) }}</td>
+                            <td>{{ \Illuminate\Support\Str::limit($message->message, 40) }}</td>
                             <td><span class="status-badge status-{{ $message->status }}">{{ ucfirst($message->status) }}</span></td>
                         </tr>
                     @empty

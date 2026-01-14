@@ -124,7 +124,7 @@
                 <tbody>
                     @forelse($topReferrers as $referrer)
                         <tr>
-                            <td><small>{{ Str::limit($referrer->referrer, 40) }}</small></td>
+                            <td><small>{{ \Illuminate\Support\Str::limit($referrer->referrer, 40) }}</small></td>
                             <td>{{ number_format($referrer->views) }}</td>
                         </tr>
                     @empty
