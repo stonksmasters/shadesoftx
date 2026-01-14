@@ -7,20 +7,23 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 // 1. CAPTURE SERVICE FROM URL
-const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location. search);
 const service = params.get('service');
 
+// Always set a value - use URL param or default to 'general-inquiry'
 if (service) {
-    // Updates UI display
     document.getElementById('service-text').innerText = service.replace(/-/g, ' ').toUpperCase();
-    // Pre-fills hidden input for Laravel
     document.getElementById('service-slug').value = service;
+} else {
+    // Set default values if no service in URL
+    document.getElementById('service-text').innerText = 'General Inquiry';
+    document.getElementById('service-slug').value = 'general-inquiry';
 }
 
 // 2. CALENDAR LOGIC
 function renderCalendar() {
     calendarGrid.innerHTML = '';
-    const year = currentNavDate.getFullYear();
+    const year = currentNavDate. getFullYear();
     const month = currentNavDate.getMonth();
 
     monthDisplay.innerText = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(currentNavDate);
@@ -35,17 +38,17 @@ function renderCalendar() {
     for (let day = 1; day <= daysInMonth; day++) {
         const dayElement = document.createElement('div');
         dayElement.classList.add('day');
-        dayElement.innerText = day;
+        dayElement. innerText = day;
 
         const checkDate = new Date(year, month, day);
 
         if (checkDate < today) {
-            dayElement.classList.add('past');
+            dayElement.classList. add('past');
         } else {
-            dayElement.onclick = () => {
-                document.querySelectorAll('.day').forEach(d => d.classList.remove('selected'));
+            dayElement. onclick = () => {
+                document.querySelectorAll('.day').forEach(d => d.classList. remove('selected'));
                 dayElement.classList.add('selected');
-                // Format for Laravel database: YYYY-MM-DD
+                // Format for Laravel database:  YYYY-MM-DD
                 dateInput.value = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
             };
         }
@@ -54,13 +57,14 @@ function renderCalendar() {
 }
 
 document.getElementById('prevMonth').onclick = () => {
-    currentNavDate.setMonth(currentNavDate.getMonth() - 1);
+    currentNavDate.setMonth(currentNavDate. getMonth() - 1);
     renderCalendar();
 };
 
 document.getElementById('nextMonth').onclick = () => {
-    currentNavDate.setMonth(currentNavDate.getMonth() + 1);
+    currentNavDate. setMonth(currentNavDate.getMonth() + 1);
     renderCalendar();
 };
 
+// Initialize calendar on page load
 renderCalendar();

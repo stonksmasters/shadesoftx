@@ -67,7 +67,7 @@
             </div>
 
             <div class="booking-form">
-                <input type="hidden" name="service_type" id="service-slug">
+                <input type="hidden" name="service_type" id="service-slug" value="general-inquiry">
                 <input type="hidden" name="selected_date" id="final-date-input" required>
 
                 <div class="form-group">

@@ -19,9 +19,8 @@ class FormController extends Controller
             'selected_date' => 'required|date',
         ]);
 
-        // Store the appointment data in the database
-        // Add your database logic here (example below):
-        // Appointment::create($validated);
+        // Save the appointment to the database
+        Appointment::create($validated);
 
         // Redirect with a success message
         return redirect()->back()->with('success', 'Appointment booked successfully!');
@@ -31,15 +30,14 @@ class FormController extends Controller
     {
         // Validate form input
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max: 255',
             'email' => 'required|email',
             'phone' => 'required|string|regex:/^[\d\-\+\(\)\s]+$/',
-            'message' => 'required|string|max:1000',
+            'message' => 'required|string|max: 1000',
         ]);
 
-        // Process contact form data (e.g., save to DB or send an email)
-        // Add your database or email-sending logic here:
-        // ContactMessage::create($validated);
+        // Save the contact message to the database
+        ContactMessage::create($validated);
 
         // Redirect with a success message
         return redirect()->back()->with('success', 'Message sent successfully!');
