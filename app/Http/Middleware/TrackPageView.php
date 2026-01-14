@@ -9,22 +9,23 @@ use Symfony\Component\HttpFoundation\Response;
 
 class TrackPageView
 {
-    public function handle(Request $request, Closure $next): Response
-    {
-        // Skip admin pages, assets, API routes
-        if (
-            $request->is('admin/*') ||
-            $request->is('css/*') ||
-            $request->is('js/*') ||
-            $request->is('images/*') ||
-            $request->is('api/*') ||
-            $request->is('favicon.ico') ||
-            $request->ajax()
-        ) {
-            return $next($request);
-        }
+public function handle(Request $request, Closure $next): Response
+{
+    // Skip admin pages, assets, API routes
+    if (
+        $request->is('admin/*') ||
+        $request->is('css/*') ||
+        $request->is('js/*') ||
+        $request->is('images/*') ||
+        $request->is('api/*') ||
+        $request->is('favicon.ico') ||
+        $request->ajax()
+    ) {
+        return $next($request);
+    }
 
-        // Record page view
+    // Try to record page view, but don't crash if database is unavailable
+    try {
         PageView::create([
             'page_url' => $request->fullUrl(),
             'page_name' => $this->getPageName($request->path()),
@@ -33,10 +34,12 @@ class TrackPageView
             'device_type' => $this->detectDeviceType($request->userAgent()),
             'session_id' => $request->session()->getId(),
         ]);
-
-        return $next($request);
+    } catch (\Exception $e) {
+        // Silently fail - don't break the site if database is unavailable
     }
 
+    return $next($request);
+}
     private function getPageName(string $path): string
     {
         if ($path === '/') {
