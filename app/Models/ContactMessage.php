@@ -11,5 +11,23 @@ class ContactMessage extends Model
         'email',
         'phone',
         'message',
+        'status',
+        'admin_notes',
+        'read_at',
+        'assigned_to',
     ];
+
+    protected $casts = [
+        'read_at' => 'datetime',
+    ];
+
+    public function assignedAdmin()
+    {
+        return $this->belongsTo(AdminUser::class, 'assigned_to');
+    }
+
+    public function scopeUnread($query)
+    {
+        return $query->where('status', 'unread');
+    }
 }

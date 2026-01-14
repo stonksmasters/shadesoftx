@@ -1,6 +1,12 @@
 <?php
 
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\AppointmentController;
+use App\Http\Controllers\Admin\ContactMessageController;
+use App\Http\Controllers\Admin\AnalyticsController;
+use App\Http\Controllers\Admin\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -154,3 +160,36 @@ Route::post('/appointments', [FormController::class, 'store'])->name('appointmen
 
 // POST route for contact form submission
 Route::post('/contact', [FormController::class, 'contact'])->name('contact.submit');
+
+// Admin Routes
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::middleware('admin.auth')->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+        
+        Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointments.index');
+        Route::get('/appointments/export', [AppointmentController::class, 'export'])->name('appointments.export');
+        Route::get('/appointments/{appointment}', [AppointmentController::class, 'show'])->name('appointments.show');
+        Route::put('/appointments/{appointment}', [AppointmentController::class, 'update'])->name('appointments.update');
+        Route::delete('/appointments/{appointment}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
+        Route::post('/appointments/bulk', [AppointmentController::class, 'bulkAction'])->name('appointments.bulk');
+
+        Route::get('/messages', [ContactMessageController::class, 'index'])->name('messages.index');
+        Route::get('/messages/{message}', [ContactMessageController::class, 'show'])->name('messages.show');
+        Route::put('/messages/{message}', [ContactMessageController::class, 'update'])->name('messages.update');
+        Route::delete('/messages/{message}', [ContactMessageController::class, 'destroy'])->name('messages.destroy');
+
+        Route::get('/analytics', [AnalyticsController::class, 'index'])->name('analytics.index');
+        Route::get('/analytics/funnel', [AnalyticsController::class, 'funnel'])->name('analytics.funnel');
+
+        Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
+        Route::put('/settings/profile', [SettingsController::class, 'updateProfile'])->name('settings.profile');
+        Route::put('/settings/password', [SettingsController::class, 'updatePassword'])->name('settings.password');
+        Route::get('/settings/team', [SettingsController::class, 'team'])->name('settings.team');
+        Route::post('/settings/team', [SettingsController::class, 'createAdmin'])->name('settings.team.create');
+        Route::delete('/settings/team/{admin}', [SettingsController::class, 'deleteAdmin'])->name('settings.team.delete');
+    });
+});
