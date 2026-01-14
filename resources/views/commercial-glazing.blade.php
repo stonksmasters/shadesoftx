@@ -47,7 +47,7 @@
                 <h1>Commercial <br>Glazing Services</h1>
                 <p class="lead">From storefront replacements to large-scale glass installations, we provide Austin businesses with structural integrity and modern aesthetics.</p>
                 <div class="cta-row">
-                    <a href="{{ url('/contact') }}" class="btn btn-main">Request Commercial Bid</a>
+                    <a href="http://127.0.0.1:8000/booking?service=commercial-glazing" class="btn btn-main">Request Commercial Bid</a>
                     <a href="#details" class="btn btn-secondary">Service Details</a>
                 </div>
             </div>
