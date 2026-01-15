@@ -160,5 +160,6 @@
         mobileNavOverlay && mobileNavOverlay.addEventListener('click', closeMobileNavFunc);
     });
     </script>
+    @yield('scripts')
 </body>
 </html>
