@@ -6,6 +6,7 @@
     <title>Commercial Solutions | Austin, TX | Shades of Texas</title>
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/services-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 </head>
 <body>
       <header class="site-header">
