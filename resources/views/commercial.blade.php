@@ -98,5 +98,43 @@
 
         </div>
     </main>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div class="footer-brand">
+                <a href="{{ url('/') }}" class="logo" aria-label="Shades of Texas - Home">SHADES<span>OF</span>TEXAS</a>
+                <p>Austin’s premier destination for high-performance solar protection and architectural glass solutions since 1989.</p>
+            </div>
+
+            <nav class="footer-col" aria-label="Solutions">
+                <h4>Solutions</h4>
+                <a href="{{ url('/residential') }}">Residential Tint</a>
+                <a href="{{ url('/commercial') }}">Commercial Film</a>
+                <a href="{{ url('/pella') }}">Pella® Windows</a>
+            </nav>
+
+            <nav class="footer-col" aria-label="Company information">
+                <h4>Company</h4>
+                <a href="{{ url('/about') }}">Our Story</a>
+                <a href="{{ url('/gallery') }}">Project Gallery</a>
+                <a href="{{ url('/contact') }}">Contact Us</a>
+            </nav>
+
+            <nav class="footer-col" aria-label="Contact information">
+                <h4>Contact</h4>
+                <a href="tel:5125550199" aria-label="Call us at 512-555-0199">(512) 555-0199</a>
+                <a href="mailto:hello@shadesoftx.com">Email Us</a>
+                <a href="{{ url('/booking') }}">Book Estimate</a>
+            </nav>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Shades of Texas. All Rights Reserved.</p>
+            <p>Built for Austin Excellence</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

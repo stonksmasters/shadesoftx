@@ -2,16 +2,22 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class AdminUser extends Authenticatable
 {
+    use HasFactory;
+
+    protected $table = 'admin_users';
+
     protected $fillable = [
         'name',
         'email',
         'password',
         'role',
         'last_login_at',
+        'remember_token',
     ];
 
     protected $hidden = [
@@ -21,20 +27,13 @@ class AdminUser extends Authenticatable
 
     protected $casts = [
         'last_login_at' => 'datetime',
+        'created_at'    => 'datetime',
+        'updated_at'    => 'datetime',
+        // others as needed
     ];
 
-    public function isSuperAdmin(): bool
-    {
+    // Optionally add a role check
+    public function isSuperAdmin() {
         return $this->role === 'super_admin';
-    }
-
-    public function assignedAppointments()
-    {
-        return $this->hasMany(Appointment::class, 'assigned_to');
-    }
-
-    public function assignedMessages()
-    {
-        return $this->hasMany(ContactMessage::class, 'assigned_to');
     }
 }

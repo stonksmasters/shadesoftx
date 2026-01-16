@@ -22,8 +22,8 @@ class AuthController extends Controller
 
         if (Auth::guard('admin')->attempt($credentials, $request->filled('remember'))) {
             $request->session()->regenerate();
-            
-            // Update last login
+
+            // Update last login timestamp for admin
             Auth::guard('admin')->user()->update([
                 'last_login_at' => now(),
             ]);
