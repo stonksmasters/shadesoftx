@@ -1258,3 +1258,19 @@ textarea.form-input {
     margin-bottom: 4px !important;
   }
 }
+/* Hide mobile nav and overlays on desktop screens */
+@media (min-width: 1025px) {
+    .mobile-header,
+    .mobile-nav-drawer,
+    .mobile-nav-overlay {
+        display: none !important;
+    }
+}
+@media (max-width: 1024px) {
+    .mobile-header {
+        display: flex;
+    }
+    .mobile-nav-drawer {
+        display: block;
+    }
+}
